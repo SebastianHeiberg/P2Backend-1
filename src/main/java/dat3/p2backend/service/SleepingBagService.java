@@ -14,6 +14,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 @Service
 public class SleepingBagService {
@@ -25,7 +26,6 @@ public class SleepingBagService {
         this.sleepingBagRepository = sleepingBagRepository;
         this.imageLinkRepository = imageLinkRepository;
     }
-
 
   public List<SleepingBagResponse> getSleepingBags(SleepingBagRequest sleepingBagRequest) {
 
@@ -52,6 +52,8 @@ public class SleepingBagService {
             .toList();
 
   }
+
+
 
   String findImageURL(SleepingBag sleepingBag) {
       Optional<ImageLink> imageLink = imageLinkRepository.findById(sleepingBag.getSku());
