@@ -64,6 +64,5 @@ PasswordEncoder passwordEncoder;
     return new MemberResponse(member, member.getResult());
   }
 
-  public void failtest()
 
 }
