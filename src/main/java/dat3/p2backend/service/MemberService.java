@@ -63,4 +63,7 @@ PasswordEncoder passwordEncoder;
     memberRepository.deleteById(id);
     return new MemberResponse(member, member.getResult());
   }
+
+  public void failtest()
+
 }
